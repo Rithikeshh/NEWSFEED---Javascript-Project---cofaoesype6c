@@ -13,12 +13,12 @@
     <script src="/NEWSFEED---Javascript-Project---cofaoesype6c/App.js" defer></script>
     
 </head>
-<body>
+<body >
     <div id="container">
         <!-- Left Container -->
-        <section id="container-left">
+        <section id="container-left" >
             <section id="non-scroll">
-                <a href="./"><img id="logo_inshorts" src="/NEWSFEED---Javascript-Project---cofaoesype6c/image/mynewsfeedlogo.png"></a>
+                <a href="./"><img id="logo_inshorts" src="./assets/images/mynewsfeedlogo.png"></a>
                 <i class="fa-solid fa-bars" id="humburger"> <span>Menu</span></i>
                 <section id="container-left--buttons">
                     <button id="new-news" class="button border-bottom"><h3>New News</h3></button>
@@ -40,21 +40,21 @@
         <section id="container-right">
             <header id="container-right-header">
                 <!-- <a href='/'> -->
-                    
                     <h4 class="navigate"><span>Click on heart to save the news </span><button class="hide">X</button></button></h4>
-                    <h1>Welcome to NewsFeed</h1>
+                    <h1 class="heading">Welcome to NewsFeed</h1>
                     <section id="search-bar">
                         <input type="text"
                         id="search-bar--input" 
                         name="search"
                         placeholder="Search by content..."
                         autocomplete="off"/>
-                        <button class="button" id="search-bar--button">Search</button>
+                        <button for="search-bar--input" class="button" id="search-bar--button">Search</button>
+                        <button id="toggle-dark">Dark Mode</button>
                     </section>
                 <!-- </a> -->
             </header>
             <section id="article-list">
-                <!-- <div class="atricle-item" id="${element.content}">
+                <!-- <div class="atricle-item" id="${element.content}"> class="dark-mode"
                     <header class="article-details">
                         <section class="atricle-detail-author">
                             By <span>${element[' author']}</span>
