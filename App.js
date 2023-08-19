@@ -17,7 +17,54 @@ let searchInput = document.querySelector('#search-bar--input');
 let searchBtn = document.querySelector('#search-bar--button')
 let savedNewsArray = [];
 let resultFromApi = [];
+let toggleBtn = document.querySelector('#toggle-dark');
 
+toggleBtn.addEventListener('click',()=>{
+    if(toggleBtn.innerText == "Dark Mode"){
+        toggleBtn.innerText = "Light Mode"
+    }
+    else{
+        toggleBtn.innerText = "Dark Mode"
+    }
+    toggleDarkMode()
+})
+function toggleDarkMode(){
+    if(toggleBtn.innerText == "Light Mode"){
+        document.querySelector('body').classList.add('dark-mode-background');
+        document.querySelector('#container-left').classList.add('dark-mode-background');
+        document.querySelector('#container-right-header').classList.add('dark-mode-background');
+        document.querySelector('.heading').classList.add('dark-mode-color');
+        document.querySelectorAll('.button').forEach((element)=>{
+            element.classList.add('dark-mode-color');
+        })
+        document.querySelectorAll('.atricle-item').forEach((element)=>{
+            element.classList.add('dark-mode-background');
+            element.classList.add('dark-mode-color');
+        })
+        document.querySelectorAll('#category-list').forEach((element)=>{
+            element.classList.add('dark-mode-color')
+        })
+        articleList.classList.add('dark-mode-color')
+    }
+    else{
+        document.querySelector('body').classList.remove('dark-mode-background');
+        document.querySelector('#container-left').classList.remove('dark-mode-background');
+        document.querySelector('#container-right-header').classList.remove('dark-mode-background');
+        document.querySelector('.heading').classList.remove('dark-mode-color');
+        document.querySelectorAll('.button').forEach((element)=>{
+            element.classList.remove('dark-mode-color');
+        })
+        document.querySelectorAll('.atricle-item').forEach((element)=>{
+            element.classList.remove('dark-mode-background');
+            element.classList.remove('dark-mode-color');
+        })
+        document.querySelectorAll('#category-list').forEach((element)=>{
+            element.classList.remove('dark-mode-color')
+        })
+        articleList.classList.remove('dark-mode-color')
+    }
+
+}
 searchBtn.addEventListener('click',()=>{
     let inputValue = searchInput.value;
     if(inputValue.trim() == ""){
@@ -135,7 +182,7 @@ async function getData(category, customNews = null, searchByValue=null){
             div.appendChild(fourthSection);
 
             articleList.appendChild(div)
-
+            toggleDarkMode()
         }
     });
     
@@ -318,6 +365,5 @@ async function init(){
     displaySavedNews();
     displayNewsByCategory();
     humburgerFunctionality();
-    
 }
 init()
