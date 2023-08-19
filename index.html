@@ -1,1 +1,87 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My News Feed</title>
+    <link rel="icon" type="image/x-icon" href="/NEWSFEED---Javascript-Project---cofaoesype6c/image/mynewsfeedlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/NEWSFEED---Javascript-Project---cofaoesype6c/styles.css">
+    <script src="/NEWSFEED---Javascript-Project---cofaoesype6c/App.js" defer></script>
+    
+</head>
+<body>
+    <div id="container">
+        <!-- Left Container -->
+        <section id="container-left">
+            <section id="non-scroll">
+                <a href="./"><img id="logo_inshorts" src="/NEWSFEED---Javascript-Project---cofaoesype6c/image/mynewsfeedlogo.png"></a>
+                <i class="fa-solid fa-bars" id="humburger"> <span>Menu</span></i>
+                <section id="container-left--buttons">
+                    <button id="new-news" class="button border-bottom"><h3>New News</h3></button>
+                    <button id="saved-news" class="button"><h3>Saved News</h3></button>
+                </section>
+                <section id="category">
+                    <ul id="category-list"><h4>Select Category</h4>
+                        <li class="category-item" id="category-business">Business</li>
+                        <li class="category-item" id="category-sports">Sports</li>
+                        <li class="category-item" id="category-science">Science</li>
+                        <li class="category-item" id="category-hatke">Hatke</li>
+                        <li class="category-item" id="category-world">World</li>
+                        <li class="category-item" id="category-politics">Politics</li>
+                    </ul>
+                </section>
+            </section>
+        </section>
+        <!-- Right Container -->
+        <section id="container-right">
+            <header id="container-right-header">
+                <!-- <a href='/'> -->
+                    
+                    <h4 class="navigate"><span>Click on heart to save the news </span><button class="hide">X</button></button></h4>
+                    <h1>Welcome to NewsFeed</h1>
+                    <section id="search-bar">
+                        <input type="text"
+                        id="search-bar--input" 
+                        name="search"
+                        placeholder="Search by content..."
+                        autocomplete="off"/>
+                        <button class="button" id="search-bar--button">Search</button>
+                    </section>
+                <!-- </a> -->
+            </header>
+            <section id="article-list">
+                <!-- <div class="atricle-item" id="${element.content}">
+                    <header class="article-details">
+                        <section class="atricle-detail-author">
+                            By <span>${element[' author']}</span>
+                        </section>
+                        <section class="atricle-detail-category">
+                            Catogety <span>${element[' category']}</span>
+                        </section>
+                    </header>
+                    <section class="article-content">
+                        <p>${element.content}
+                            <a href="${element.url}" target="_blank"><span>Read More.</span></a>
+                        </p>
+                        
+                    </section>
+                    <section class="like">
+                        <i class="fa-regular fa-heart save-news-icon"></i>
+                    </section>
+                </div> -->
+            </section>
+            <footer id="rights" class="show hidden">
+                Copyright &copy;2021 All Rights Reserved | Designed by My News Feed.
+            </footer>
+        </section>
+    </div>
+    <!-- <div id="tour">
+        Click on heart to save the news<button>x</button>
+    </div> -->
+    
+</body>
+</html>
