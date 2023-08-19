@@ -110,11 +110,16 @@ body::-webkit-scrollbar{
 .hide-popup{
     visibility: hidden;
 }
-#container-right-header h1 { /*a*/
-    /* text-decoration: none; */
-    /* cursor: pointer; */
-    color: grey;
+.heading{
+    color: gray;
     font-size: 36px;
+}
+#container-right-header #toggle-dark{
+    background-color: #dedede;
+    color: rebeccapurple;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 0px 8px;
 }
 #container-left--buttons{
     display: flex;
@@ -206,6 +211,11 @@ body::-webkit-scrollbar{
 .show{
     display: block;
 }
+.dark-mode-background{
+    background: rgb(34,35,36);
+    background: linear-gradient(90deg, rgba(34,35,36,1) 0%, rgba(49,60,64,1) 100%); 
+}
+
 
 @media only screen  and (max-width :700px){
     #container{
@@ -217,7 +227,7 @@ body::-webkit-scrollbar{
     }
 }
 @media only screen  and (max-width :620px){
-    #container-right-header h1 { 
+    .heading { 
         color: grey;
         text-align: center;
         font-size: 28px;
@@ -262,4 +272,6 @@ body::-webkit-scrollbar{
     }
     
 }
-
+.dark-mode-color{
+    color: #ffffff;
+}
