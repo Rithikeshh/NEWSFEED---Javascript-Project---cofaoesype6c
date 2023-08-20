@@ -20,7 +20,6 @@ let resultFromApi = [];
 let toggleBtn = document.querySelector('#toggle-dark');
 
 toggleBtn.addEventListener('click',()=>{
-    console.log("ji")
     if(toggleBtn.classList.contains('fa-moon')){
         toggleBtn.style.color = "white"
     }
