@@ -70,6 +70,7 @@ body::-webkit-scrollbar{
 }
 #search-bar{
     display: flex;
+    justify-content: center;
     gap: 4px;
     flex-wrap: wrap;
     margin-right: 12px;
@@ -111,6 +112,7 @@ body::-webkit-scrollbar{
     visibility: hidden;
 }
 .heading{
+    text-align: center;
     color: gray;
     font-size: 36px;
 }
@@ -256,7 +258,7 @@ body::-webkit-scrollbar{
         padding: 4px;
         visibility: visible;
     }
-    #humburger span{
+    .humburger-text{
         font-weight: 200;
         padding-left: 2px;
         font-size: 12px;
