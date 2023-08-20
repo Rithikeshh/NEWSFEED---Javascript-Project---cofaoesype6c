@@ -20,17 +20,19 @@ let resultFromApi = [];
 let toggleBtn = document.querySelector('#toggle-dark');
 
 toggleBtn.addEventListener('click',()=>{
-    if(toggleBtn.innerText == "Dark Mode"){
-        toggleBtn.innerText = "Light Mode"
+    if(toggleBtn.classList.contains('fa-moon')){
+        toggleBtn.style.color = "white"
     }
     else{
-        toggleBtn.innerText = "Dark Mode"
+        toggleBtn.style.color = "black"    
     }
+    toggleBtn.classList.toggle('fa-sun')
+    toggleBtn.classList.toggle('fa-moon')
     toggleDarkMode()
 })
 function toggleDarkMode(){
-    if(toggleBtn.innerText == "Light Mode"){
-        document.querySelector('#humburger span').classList.add('dark-mode-color')
+    if(toggleBtn.classList.contains('fa-sun')){
+        document.querySelector('#humburger span').classList.add('dark-mode-color') //
         document.querySelector('body').classList.add('dark-mode-background');
         document.querySelector('#container-left').classList.add('dark-mode-background');
         document.querySelector('#container-right-header').classList.add('dark-mode-background');
@@ -46,6 +48,7 @@ function toggleDarkMode(){
             element.classList.add('dark-mode-color')
         })
         articleList.classList.add('dark-mode-color')
+
     }
     else{
         document.querySelector('#humburger span').classList.remove('dark-mode-color') //
