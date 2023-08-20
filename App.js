@@ -30,6 +30,7 @@ toggleBtn.addEventListener('click',()=>{
 })
 function toggleDarkMode(){
     if(toggleBtn.innerText == "Light Mode"){
+        document.querySelector('#humburger span').classList.add('dark-mode-color')
         document.querySelector('body').classList.add('dark-mode-background');
         document.querySelector('#container-left').classList.add('dark-mode-background');
         document.querySelector('#container-right-header').classList.add('dark-mode-background');
@@ -47,6 +48,7 @@ function toggleDarkMode(){
         articleList.classList.add('dark-mode-color')
     }
     else{
+        document.querySelector('#humburger span').classList.remove('dark-mode-color') //
         document.querySelector('body').classList.remove('dark-mode-background');
         document.querySelector('#container-left').classList.remove('dark-mode-background');
         document.querySelector('#container-right-header').classList.remove('dark-mode-background');
