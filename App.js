@@ -20,6 +20,7 @@ let resultFromApi = [];
 let toggleBtn = document.querySelector('#toggle-dark');
 
 toggleBtn.addEventListener('click',()=>{
+    console.log("ji")
     if(toggleBtn.classList.contains('fa-moon')){
         toggleBtn.style.color = "white"
     }
@@ -176,7 +177,10 @@ async function getData(category, customNews = null, searchByValue=null){
 
             heart.addEventListener('click',(e)=>{
                 addToSaveNews(e,element)
-                
+                heart.classList.add('like-effect')
+                setTimeout(()=>{
+                    heart.classList.remove('like-effect')
+                },300)
             })
 
             fourthSection.appendChild(heart)
