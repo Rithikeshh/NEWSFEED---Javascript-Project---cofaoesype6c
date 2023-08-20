@@ -112,15 +112,18 @@ body::-webkit-scrollbar{
     visibility: hidden;
 }
 .heading{
-    text-align: center;
+    text-align: center; 
     color: gray;
     font-size: 36px;
 }
-#container-right-header #toggle-dark{
-    background-color: #dedede;
-    color: rebeccapurple;
+#toggle-dark{
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    left: 85%;
+    top: 1%;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 24px;
     padding: 0px 8px;
 }
 #container-left--buttons{
@@ -258,7 +261,7 @@ body::-webkit-scrollbar{
         padding: 4px;
         visibility: visible;
     }
-    .humburger-text{
+    .humburger-text{ 
         font-weight: 200;
         padding-left: 2px;
         font-size: 12px;
