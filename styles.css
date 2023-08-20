@@ -195,6 +195,17 @@ body::-webkit-scrollbar{
 }
 .like{
     text-align: right;
+    
+}
+.like-effect{
+    animation-name: effect;
+    animation-duration: 0.3s;
+}
+@keyframes effect {
+    0%{zoom: 1}
+    30%{zoom: 0.8}
+    70%{zoom: 1.2}
+    100%{zoom: 1}
 }
 .save-news-icon{
     cursor: pointer;
