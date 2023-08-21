@@ -17,14 +17,20 @@ let searchInput = document.querySelector('#search-bar--input');
 let searchBtn = document.querySelector('#search-bar--button')
 let savedNewsArray = [];
 let resultFromApi = [];
+let toggleBtnSection = document.querySelector('#dark-mode-section')
 let toggleBtn = document.querySelector('#toggle-dark');
 
-toggleBtn.addEventListener('click',()=>{
+toggleBtnSection.addEventListener('click',()=>{
+    
     if(toggleBtn.classList.contains('fa-moon')){
         toggleBtn.style.color = "white"
+        document.querySelector('#mode-text').innerHTML = "Light"
+        document.querySelector('#mode-text').style.color = "white"
     }
     else{
-        toggleBtn.style.color = "black"    
+        toggleBtn.style.color = "black" 
+        document.querySelector('#mode-text').innerHTML = "Dark" 
+        document.querySelector('#mode-text').style.color = "black"  
     }
     toggleBtn.classList.toggle('fa-sun')
     toggleBtn.classList.toggle('fa-moon')
