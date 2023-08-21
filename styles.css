@@ -128,6 +128,9 @@ body::-webkit-scrollbar{
     border-radius: 4px;
     cursor: pointer;
 }
+#mode-text{
+    font-weight: 500;
+}
 #toggle-dark{
     color: black;
     font-size: 24px;
